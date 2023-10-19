@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>work</title>
+  <link rel="stylesheet" href="css/style_work.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/scrolla.jquery.min.js"></script>
+  <script src="js/splitting.min.js"></script>
+  <script src="js/jquery.simplyscroll.min.js"></script>
+  <script src="js/script_work.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="innerHeader">
+        <h1 class="logo">
+          <a href="index.html"><img src="IMG/INDEX/header/LOGO.png" alt=""></a>
+        </h1>
+        <ul class="rightBox">
+          <li class="mail"><a href="mailto:sbn627@naver.com">sbn627@naver.com</a></li>
+          <li class="work"><a href="process.html">PORTFOLIO</a></li>
+          <li class="menuOpen">
+            <a href="#">
+              <span class="line a"></span>
+              <span class="line b"></span>
+              <span class="line c"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- gnb -->
+      <nav class="gnb en2">
+        <div class="innerNav">
+          <a href="work.html" class="menuClose"><span class="lnr lnr-cross"></span></a>
+          <ul>
+            <li><a href="index.html">
+                <p>HOME</p>
+              </a></li>
+            <li><a href="about.html">
+                <p>ABOUT</p>
+              </a></li>
+            <li><a href="work.html">
+                <p>WORK</p>
+              </a></li>
+            <li><a href="process.html">
+                <p>PORTFOLIO PROCESS</p>
+              </a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="visual">
+      <div class="inner">
+        <div class="left animate" data-animate="motion">
+          <h1 data-splitting class="en1">
+            SOME OF<br>
+            MY COLLEDTED<br>
+            WORK
+          </h1>
+        </div>
+        <div class="visualimgs">
+          <div class="mainImg"></div>
+          <img class="deco01" src="IMG/WORK/VISUAL/deco01.png" alt="">
+          <img class="deco02" src="IMG/WORK/VISUAL/deco02.png" alt="">
+        </div>
+        <div class="right animate" data-animate="motion">
+          <h2 data-splitting class="en1">
+            USER <br>
+            <span class="h2_1">EXPERIENCE</span><br>
+            INTERFACE <br>
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="myWork">
+      <div class="inner">
+        <div class="titleBox animate" data-animate="motion">
+          <h2 class="en1">My work</h2>
+          <img src="IMG/ABOUT/timeline/deco3.png" alt="">
+        </div>
+        <div class="subText animate" data-animate="motion">
+          <p>
+            신규로 작업한 기획 및 코딩 프로젝트들과 전 직장에서 진행해온 기획 업무 내용을 담았습니다.<br>
+            전 직장에서의 작업물들은 기획 위주의 메인 프로젝트로만 정리 하였습니다.
+          </p>
+        </div>
+        <div class="totallImg">
+          <img class="star" src="IMG/WORK/mywork/deco01.png" alt="" class="deco">
+          <div class="line"></div>
+          <img class="star" src="IMG/WORK/mywork/deco01.png" alt="" class="deco">
+          <ul class="workImg">
+            <li class="img2 upBox"><img src="IMG/WORK/mywork/img2.png" alt=""></li>
+            <li class="img3 upBox"><img src="IMG/WORK/mywork/img3.png" alt=""></li>
+            <li class="img1 upBox"><img src="IMG/WORK/mywork/img1.png" alt=""></li>
+          </ul>
+        </div>
+        <ul class="count">
+          <li>
+            <span class="num">+2</span>
+            UI/UX planning
+          </li>
+          <li>
+            <span class="num">+7</span>
+            Clone cording
+          </li>
+          <li>
+            <span class="num">+4</span>
+            Previous job project
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="textScroll1">
+      <ul id="scroller2">
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+        <li>See my work · </li>
+      </ul>
+    </section>
+    <section class="workList1" id="workList1">
+      <ul class="listScroll">
+        <li>
+          <div class="list">
+            <div class="mokup"><img src="IMG/WORK/worklist1/Mockup1.png" alt=""></div>
+            <div class="textBox">
+              <div class="info">
+                <h3 class="en1">UI/UX PROCESS</h3>
+                <p class="subtitle">Youtube Music
+                  <a href="https://www.figma.com/file/8kGst2CAySnlts00Hvp6qt/youtubemusic-renewal?type=design&node-id=0%3A1&mode=design&t=JqkTn9d6hj939ZHG-1"
+                    onclick="window.open(this.href, '_blank', 'width=1920, height=1080'); return false;">https://www.figma.com/youtubemusic</a>
+                </p>
+                <p class="text">
+                  국내 경쟁사의 뮤직앱 서비스를 분석하여 첫 방문자를 고려한 <span class="en2">‘</span>한국형 유튜브 뮤직앱<span class="en2">’</span>을 목표로
+                  하여 부족한 기능을 추가하고 접근성과 사용성을 향상하였습니다.
+                </p>
+                <p class="rabel">
+                  <span># Figma</span>
+                  <span># 리뉴얼</span>
+                  <span># UI 개선</span>
+                  <span># UX 고도화</span>
+                </p>
+                <div class="btn en2">
+                  <a href="file/workList1/renewal_유튜브 뮤직_UIUX 기획서.pdf"
+                    onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">More view</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="list">
+            <div class="mokup"><img src="IMG/WORK/worklist1/Mockup2.png" alt=""></div>
+            <div class="textBox">
+              <div class="info">
+                <h3 class="en1">UI/UX PROCESS</h3>
+                <p class="subtitle">HAPPYPOINT
+                  <a href="http://bichna0627.dothome.co.kr"
+                    onclick="window.open(this.href, '_blank', 'width=1920, height=1080'); return false;">http://bichna0627.dothome.co.kr</a>
+                </p>
+                <p class="text">
+                  앱테크 관심이 높아짐에따라 웹은 변화 없이 정체되어 있음을 확인하였습니다. 따라서 웹의 메인 섹션을 재구성 하고 웹사이트를 통한 앱유저 추가 확보를 목표로 리뉴얼 하였습니다.
+                </p>
+                <p class="rabel">
+                  <span># Figma</span>
+                  <span># Photoshop</span>
+                  <span># 리뉴얼</span>
+                  <span># UI 개선</span>
+                  <span># UX 고도화</span>
+                </p>
+                <div class="btn en2">
+                  <a href="file/workList1/renewal_해피포인트_UI구현 및 리뉴얼 기획서.pdf"
+                    onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">More view</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="list">
+            <div class="mokup"><img src="IMG/WORK/worklist1/Mockup5.png" alt=""></div>
+            <div class="textBox">
+              <div class="info">
+                <h3 class="en1">CLONE CODING</h3>
+                <p class="subtitle">Crew a la mode</p>
+                <p class="text">
+                  fixList 함수를 활용하여 스크롤 위치에 따라 변화하는 효과를 부여했습니다. 추가로 화면 왼쪽에서 나타나는 메뉴바를 구현하여 네비게이션을 편리하게 이용할 수 있도록 했습니다.
+                </p>
+                <p class="rabel">
+                  <span># FixList 함수</span>
+                  <span># Splitting</span>
+                  <span># Scrolla</span>
+                  <span># 메뉴바</span>
+                </p>
+                <div class="btn en2">
+                  <a href="coding/크루얼라모드/index.html"
+                    onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">More view</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="list">
+            <div class="mokup"><img src="IMG/WORK/worklist1/Mockup7.png" alt=""></div>
+            <div class="textBox">
+              <div class="info">
+                <h3 class="en1">CLONE CODING</h3>
+                <p class="subtitle">Musign Agency</p>
+                <p class="text">
+                  원 요소는 SVG 애니메이션을 활용하여 동적 효과를 부여하였고 Mask 애니메이션은 흰색 배경이 아래에서 위로 채워지는 시각적 효과를 구현하였습니다.
+                </p>
+                <p class="rabel">
+                  <span># 반응형</span>
+                  <span># Scrolla</span>
+                  <span># 배경 전환</span>
+                  <span># Svg 애니메이션</span>
+                </p>
+                <div class="btn en2">
+                  <a href="coding/뮤자인/index.html"
+                    onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">More view</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="list">
+            <div class="mokup"><img src="IMG/WORK/worklist1/Mockup8.png" alt=""></div>
+            <div class="textBox">
+              <div class="info">
+                <h3 class="en1">CLONE CODING</h3>
+                <p class="subtitle">Y Studio</p>
+                <p class="text">
+                  스크롤 이동시 최상단 왼쪽에 있는 로고가 변경되며 중요도가 높은 컨텍 섹션은 이미지에 position fix 기능을 주어 다른 내용과 구별되어 돋보이게 하였습니다.
+                </p>
+                <p class="rabel">
+                  <span># Slick</span>
+                  <span># Scrolla</span>
+                  <span># 메뉴바</span>
+                  <span># Top 버튼</span>
+                </p>
+                <div class="btn en2">
+                  <a href="coding/와이스튜디오/index.html"
+                    onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">More view</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="list">
+            <div class="mokup"><img src="IMG/WORK/worklist1/Mockup3.png" alt=""></div>
+            <div class="textBox">
+              <div class="info">
+                <h3 class="en1">CLONE CODING</h3>
+                <p class="subtitle">The Dopda</p>
+                <p class="text">
+                  처음 접속했을 때 사용자의 눈길을 사로잡기 위해 비쥬얼 섹션의 이미지가 일정한 비율로 확장되면서 부분적으로 가려지는 시각적인 효과를 추가했습니다.</p>
+                <p class="rabel">
+                  <span># 반응형</span>
+                  <span># Slick</span>
+                  <span># Scrolla</span>
+                </p>
+                <div class="btn en2">
+                  <a href="coding/돕다/index.html"
+                    onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">More view</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="list">
+            <div class="mokup"><img src="IMG/WORK/worklist1/Mockup4.png" alt=""></div>
+            <div class="textBox">
+              <div class="info">
+                <h3 class="en1">CLONE CODING</h3>
+                <p class="subtitle">Habwha Camiacal</p>
+                <p class="text">
+                  타이틀과 서브타이틀에 낱글자로 모션을 줄 수 있는 data-splitting 속성을 사용하여 밋밋 할 수 있는 페이지에 역동적인 효과를 추가하였습니다.
+                </p>
+                <p class="rabel">
+                  <span># 반응형</span>
+                  <span># Splitting</span>
+                  <span># Scrolla</span>
+                </p>
+                <div class="btn en2">
+                  <a href="coding/한화캐미컬/index.html"
+                    onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">More view</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="list">
+            <div class="mokup"><img src="IMG/WORK/worklist1/Mockup6.png" alt=""></div>
+            <div class="textBox">
+              <div class="info">
+                <h3 class="en1">CLONE CODING</h3>
+                <p class="subtitle">Korea Consumer Agency</p>
+                <p class="text">
+                  Top 버튼을 넣어 시각적으로 눈에 듸게 하였으며 사용자에게 페이지 끝에 도달했음을 알려주어 사용자 행동을 유도하고 사이트 탐색을 유도하는데 도움을 주었습니다.
+                </p>
+                <p class="rabel">
+                  <span># Top 버튼</span>
+                  <span># Scrolla</span>
+                </p>
+                <div class="btn en2">
+                  <a href="coding/한국소비자원/index.html"
+                    onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">More view</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="list">
+            <div class="mokup"><img src="IMG/WORK/worklist1/Mockup9.png" alt=""></div>
+            <div class="textBox">
+              <div class="info">
+                <h3 class="en1">CLONE CODING</h3>
+                <p class="subtitle">Dabang</p>
+                <p class="text">
+                  판매 정보가 담겨져 있는 콘텐츠 섹션으로 스크롤 다운 버튼을 넣어 사용자의 주의를 집중시키고 비디오 박스에 마스크를 씌워 시각적 효과를 개선하였습니다.
+                </p>
+                <p class="rabel">
+                  <span># Slick</span>
+                  <span># Scrolla</span>
+                  <span># video 박스</span>
+                  <span># 메뉴바</span>
+                  <span># Down 버튼</span>
+                </p>
+                <div class="btn en2">
+                  <a href="coding/한국소비자원/index.html"
+                    onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">More view</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="workList2" id="workList2">
+      <div class="inner">
+        <div class="mockup">
+          <img class="star" src="IMG/WORK/worklist2/deco01.png" alt="" class="deco">
+          <span class="line"></span>
+          <img class="star" src="IMG/WORK/worklist2/deco01.png" alt="" class="deco">
+          <img class="mockupImg" src="IMG/WORK/worklist2/어둡게(태블릿-색-변경)-1.png" alt="">
+        </div>
+        <ul>
+          <li class="on">
+            <img src="IMG/WORK/worklist2/img1.png" alt="">
+            <div class="textBox">
+              <p class="subTitle en2">
+                SERVICE PLANNING
+              </p>
+              <p class="text">
+                인천 e몰에 입점해 있는 파트너사들의 편의성을 위해 SCM (Supply Chain Management) 서비스 웹을 기획하여<br>
+                상품 등록부터 행사 참여까지 원스톱으로 할 수 있도록 하였고 파트너사 담당자들의 관리 리소스를 감소 시켰습니다.
+              </p>
+            </div>
+            <div class="btn en2">
+              <a href="file/workList1/service_SCM 기획 설계서.pdf"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">
+                More view
+                <span class="line"></span>
+                <span class="plus">+</span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <img src="IMG/WORK/worklist2/img7.png" alt="">
+            <div class="textBox">
+              <p class="subTitle en2">
+                EVENT PLANNING
+              </p>
+              <p class="text">
+                설연휴를 맞이하여 다양한 이벤트를 기획하고 전년도 설 판매 상위권 상품으로 베스트부터 식품/생활용품까지<br>
+                총 7개의 카테고리로 나누어 준비하였습니다. 해당 행사로 인해 전달 대비 매출 10% 상승 결과를 만들어냈습니다.
+              </p>
+            </div>
+            <div class="btn en2">
+              <a href="file/workList1/event_설기획전 기획서.pdf"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">
+                More view
+                <span class="line"></span>
+                <span class="plus">+</span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <img src="IMG/WORK/worklist2/img2.png" alt="">
+            <div class="textBox">
+              <p class="subTitle en2">
+                CONTENTS PLANNING
+              </p>
+              <p class="text">
+                여행 속에서도 ‘맛집 투어’는 하나의 필수 코스처럼 여겨지고 있습니다. 이에 걸맞춰 각 지역별로 유명한 음식들을<br>
+                밀키트로 출시한 상품들을 소싱하여 ‘방콕 하면서 즐기는 맛집투어’ 라는 컨셉의 매거진을 기획하였습니다.</p>
+            </div>
+            <div class="btn en2">
+              <a href="file/workList1/contents_매거진13 기획서.pdf"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">
+                More view
+                <span class="line"></span>
+                <span class="plus">+</span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <img src="IMG/WORK/worklist2/img4.png" alt="">
+            <div class="textBox">
+              <p class="subTitle en2">
+                CONTENTS PLANNING
+              </p>
+              <p class="text">
+                소셜 네트워크 서비스(SNS) 내에서 전년 대비 7배 증가해 ‘집순이 · 집돌이’에 대한 관심이 매년 빠르게 증가하고 있는 것을<br>
+                빅데이터를 통해 확인하였습니다. 이러한 사회적 현황에 맞추어 해당 소비자를 경냥한 컨셉의 매거진을 기획하였습니다.
+              </p>
+            </div>
+            <div class="btn en2">
+              <a href="file/workList1/contents_매거진17 기획서.pdf"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=1000'); return false;">
+                More view
+                <span class="line"></span>
+                <span class="plus">+</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="textScroll2">
+      <ul id="scroller3">
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+        <li>See NCS process · </li>
+      </ul>
+    </section>
+    <section class="NCS" id="NCS">
+      <div class="inner">
+        <div class="titleBox animate" data-animate="motion">
+          <h2 class="en1">NCS PROCESS</h2>
+        </div>
+        <div class="subText animate" data-animate="motion">
+          <p>
+            6개월 동안 NCS 과정을 수료하여 사용자 특성을 고려한 UI/UX 설계와 기획에 대한 폭넓은 이해를 얻었습니다.<br> 스크롤을 내리면 상세 내용을 확인할 수 있습니다.
+          </p>
+        </div>
+        <ul>
+          <li class="on">
+            <h3 class="subTitle">
+              01.<span class='en2'>Web UI UX Planning & Design</span>
+            </h3>
+            <div class="textBox">
+              <span class="num en2">STEP 01</span>
+              <p>프로젝트 배경에 대해 조사하고 해당 서비스를 이용하는 <br>사용자 분석을 통해 콘셉을 결정 한 후 그 결과에 맞춰 주요 기능과 콘텐츠를 정의하여 계획을 수립 할 수 있습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <h3 class="subTitle">
+              02.<span class='en2'>Web UI implemented & Test eb UI planning</span>
+            </h3>
+            <div class="textBox">
+              <span class="num en2">STEP 02</span>
+              <p>웹 UI를 효율적으로 테스트하기 위한 계획을 수립하고 테스트 환경을 설정하여 테스트 케이스와 시나리오를 작성하여 그 목적에 맞는 디자인과 기능을 구현합니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <h3 class="subTitle">
+              03.<span class='en2'>Web UI Design</span>
+            </h3>
+            <div class="textBox">
+              <span class="num en2">STEP 03</span>
+              <p>사용자 인터페이스를 설계하는 과정으로 사용자들이 웹 <br>페이지를 효과적으로 이용하고 상호 작용할 수 있도록 <br>디자인하는 것을 목표로 합니다. </p>
+            </div>
+          </li>
+          <li>
+            <h3 class="subTitle">
+              04.<span class='en2'>Web Frontend Development Basic</span>
+            </h3>
+            <div class="textBox">
+              <span class="num en2">STEP 04</span>
+              <p> 웹페이지의 구조와 콘텐츠를 정의하는 마크업 언어와 <br>스타일을 디자인하는 css 그리고 JavaScrip를 활용하여 <br>웹 동작과 성능 향상을 위한 기초 개념을 알게됩니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <h3 class="subTitle">
+              05.<span class='en2'>Frontend Development React JS</span>
+            </h3>
+            <div class="textBox">
+              <span class="num en2">STEP 05</span>
+              <p> ReactJS는 UI를 구축하는 컴포넌트 기반의 JavaScript <br>라이브러리로 간결한 문법으로 동적인 웹 애플리케이션을 가장 효과적으로 개발 할 수 있도록 활용할 수
+                있습니다.</p>
+            </div>
+          </li>
+          <li>
+            <h3 class="subTitle">
+              06.<span class='en2'>Node Js Distributione</span>
+            </h3>
+            <div class="textBox">
+              <span class="num en2">STEP 06</span>
+              <p>Node.js의 Distribution 은 runtime을 설치하고 설정하는 방법으로 공식 다운로드나 패키지 매니저/NVM/Docker를 사용하여 Node.js를 설치하고 관리합니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <h3 class="subTitle">
+              07.<span class='en2'>Graphic design figma / phtoshop</span>
+            </h3>
+            <div class="textBox">
+              <span class="num en2">STEP 07</span>
+              <p> Figma는 협업과 프로토타이핑에 Photoshop은 이미지 편집과 디자인에 사용되며 프로젝트에 맞게 선택하여 함께 활용하면 더 다양한 디자인 작업이 가능합니다.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="inner">
+        <div class="titlebox">
+          <h3 class="en1">LET’S CONTACT ME</h3>
+        </div>
+        <div class="container animate" data-animate="motion">
+          <ul>
+            <li>
+              <div class="svgAni">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 593.11 1151.11" style="enable-background:new 0 0 593.11 1151.11;"
+                  xml:space="preserve">
+                  <style type="text/css">
+                    #svg01 {
+                      fill: none;
+                      stroke: #FE4400;
+                      stroke-miterlimit: 10;
+                    }
+                  </style>
+                  <path id="svg01" d="M188.23,361.85c0,0,47.2,3.05,132.47-38.07s89.21-137.37,52.85-88.18c0,0-17.11-48.12-23.92,9
+                    c-7.79,65.3,88.69,129.42,115.72,138.56c23.12,7.82,65.47,7.61,59.38-39.59L498.84,136.5L337.44,10.52l-114.2,165.57l39.59,252.76
+                    l70.8-11.42l89.28-16.15c15.02-2.88,5.51-22.67-18.47-8.21c-36.13,21.79-47.08,68.66-35.02,102.02
+                    c13.19,36.51,70.21,58.25,121.05,54.05c81.97-6.77,131.71-45.68,60.91-39.59c-90.41,7.78-384.97,142.11-541.92,637.42
+                    c-0.43,1.34-0.6,2.76-0.9,4.14" />
+                </svg>
+              </div>
+            </li>
+            <li>
+              <p><span class="en2">E .</span>sbn627@naver.com</p>
+              <p><span class="en2">Tel .</span>010-5567-8430</p>
+              <p><span class="en2">SNS .</span>instagram_binnada</p>
+            </li>
+          </ul>
+          <span class="copy">ⓒ 2023 Seo Bichna UI · UX Webflow Designer</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

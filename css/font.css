@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-display: swap;
+  src: local('Pretendard Bold'), url('./woff2/Pretendard-Bold.woff2') format('woff2'), url('./woff/Pretendard-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-display: swap;
+  src: local('Pretendard Regular'), url('./woff2/Pretendard-Regular.woff2') format('woff2'), url('./woff/Pretendard-Regular.woff') format('woff');
+}
+
+/* en1 */
+@font-face {
+  font-family: 'ValkyRegular';
+  src: url(../font/ValkyRegular.ttf) format('truetype');
+}
+
+/* en2 */
+@font-face {
+  font-family: 'LibreBaskerville-Regular';
+  src: url(../font/LibreBaskerville-Regular.ttf) format('truetype');
+}
+
+/* en3 */
+@font-face {
+  font-family: 'LibreBaskerville-Italic';
+  src: url(../font/LibreBaskerville-Italic.ttf) format('truetype');
+}

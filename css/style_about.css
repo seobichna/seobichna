@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/** layout **/
+body {font-family: 'Pretendard'; font-size: 26px; color: #5B523E;}
+
+
+/** font **/
+.en1 {font-family: 'ValkyRegular';}
+.en2 {font-family: 'LibreBaskerville-Regular';}
+.en3 {font-family: 'LibreBaskerville-Italic';}
+
+/* Ttitle 공통 */
+.titleBox { position: relative; text-align: center; padding-top: 160px;}
+.titleBox h2 {font-size: 40px; font-weight: lighter;}
+.titleBox img {position: absolute; top: 65%; left: 50%; transform: translateX(-50%);}
+.titlebox h3 {font-size: 80px; font-weight: lighter; padding-top: 130px;}
+.titlebox p {font-size: 26px; letter-spacing: -1.3px; line-height: 35px;padding-bottom: 40px;}
+
+
+/** active 모음 **/
+
+/* 스크롤 시 header 없어짐 */
+header.active {transform: translateY(-200%); transition: all 0.3s;}
+.visual.active::after {height: 0;}
+
+/** on 모음 **/
+
+/* hrader > gnb */
+.gnb.on {right: 0; transition: all 0.8s; opacity: 1;}
+
+
+/* ani 모음 */
+
+@keyframes dot {
+  100% {opacity: 1; transform: scale(3.5); opacity: 0;}
+}
+
+/* footer > svg > Deco1 */
+@keyframes deco1  { 
+  0% {stroke-dashoffset : 3,011;} 
+  100% {stroke-dashoffset : 0;} 
+}
+
+/* visual > deco2,3,4 */
+
+@keyframes deco2 {
+  10% {transform: rotateX(180deg)}
+  60% {transform: rotateX(-90deg)}
+  100% {transform: rotateX(180deg)}
+}
+
+@keyframes deco3 {
+  30% {transform: rotateZ(-200deg);}
+}
+
+@keyframes deco4 {
+  10% {transform: rotate(15deg);}
+  30% {transform: rotate(-25deg);}
+  70% {transform: rotate(15deg);}
+}
+
+/* aboutDetail > titleBox2 */
+
+@keyframes textAni {
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: translate3d(0,20px,0) skewY(4deg); transform-origin: top left;}
+}
+
+@keyframes conAni {
+  0% {opacity: 0;}
+  50% {opacity: 0; transform: translateX(800px);}
+}
+
+
+/** hover 모음 **/
+
+/* logo */
+header .innerHeader .logo img:hover {transform: scale(1.2);}
+
+/* gnb > menuOpen */
+header .innerHeader .rightBox .menuOpen:hover {background: #FE4400; }
+header .innerHeader .rightBox .menuOpen:hover span {background: #fff;}
+header .innerHeader .rightBox .menuOpen:hover span.a {top: 35%;}
+header .innerHeader .rightBox .menuOpen:hover span.c {bottom: 30%;}
+header .innerHeader .rightBox .mail:hover {transform: scale(1.1);}
+header .innerHeader .rightBox .work:hover {transform: scale(1.1);}
+
+/* gnb > menuClose */
+.gnb .innerNav .menuClose:hover {transform: rotate(180deg); background-color: #FE4400; border: 1.75px solid #FE4400;}
+.gnb .innerNav .menuClose:hover span {color: #fff;}
+
+/* gnb > menuClose */
+.gnb .innerNav .menuOpen:hover {transform: rotate(180deg); background-color: #FE4400;}
+.gnb .innerNav .menuOpen:hover span {color: #fff;}
+
+/* gnb >li */
+.gnb .innerNav ul li a p:hover{color: #FE4400;}
+.gnb .innerNav ul li a p:hover:after{ transform: scaleX(1); transform-origin: 0% 50%;}
+
+/* timeline > line*/
+.r1 .roadImg:hover ~ .textBox {opacity: 1; z-index: 1; transition: all 0.8s;}
+.r1 .roadImg:hover svg #fill {stroke: #FECBB5; transition: all 0.8s;}
+.r2 .roadImg:hover ~ .textBox {opacity: 1; z-index: 1; transition: all 0.8s;}
+.r2 .roadImg:hover svg #fill {stroke: #FECBB5; transition: all 0.8s;}
+.r3 .roadImg:hover ~ .textBox {opacity: 1; z-index: 1; transition: all 0.8s;}
+.r3 .roadImg:hover svg #fill {stroke: #FECBB5; transition: all 0.8s;}
+.r4 .roadImg:hover ~ .textBox {opacity: 1; z-index: 1; transition: all 0.8s;}
+.r4 .roadImg:hover svg #fill {stroke: #FECBB5; transition: all 0.8s;}
+
+/* motto > cursor */
+.cursor2.hover,.cursor3.hover{ width: 400px; height: 300px; border:none; border-radius: 8px; background-size: cover; box-shadow: 0 0 0 rgba(16, 39, 112, 0.2); transition: all; z-index: 0;}
+.motto .inner .textBox p .hover-target:hover { color: #FE4400; border: 1px solid #FE4400;}
+
+/** header **/
+header {position: fixed; z-index: 100; width: 100%; padding-top: 50px; box-sizing: border-box; height: 57px;}
+header .innerHeader {width: 90%; margin: 0 auto; justify-content: space-between; display: flex;}
+header .innerHeader .logo {width: 130px;}
+header .innerHeader .logo a {width: 100%;}
+header .innerHeader .logo a img {width: 100%; transition: all 0.3s;}
+header .innerHeader .rightBox {justify-content: space-between;  display: flex;  width: 33%;  line-height: 57px; font-size: 26px; color: #FE4400;}
+header .innerHeader .rightBox .mail {color: #FE4400; border: 1.75px solid #FE4400; border-radius: 27.5px; padding: 0px 20px; transition: all 0.3s;}
+header .innerHeader .rightBox .work {color: #ffff; background: #FE4400; border-radius: 27.5px; padding: 0px 20px; transition: all 0.3s;}
+header .innerHeader .rightBox .menuOpen {border: 1.75px solid #FE4400; border-radius: 50%; width: 57px; position: relative; cursor: pointer; transition: all 0.3s;}
+header .innerHeader .rightBox .menuOpen span {width: 18px; height: 1px; background: #FE4400; position: absolute; left: 50%; transform: translateX(-50%); transition: all 0.3s;}
+header .innerHeader .rightBox .menuOpen span.a {top: 40%;}
+header .innerHeader .rightBox .menuOpen span.b {top: 50%;}
+header .innerHeader .rightBox .menuOpen span.c {bottom: 35%;}
+
+
+/** header > gnb **/
+.gnb {opacity: 0; padding: 37px 0; background: #FECBB5; position: absolute; top: 0; right: -100%; width: 100%; height: 100vh;}
+.gnb .innerNav {width: 90%; margin: 0 auto;}
+.gnb .innerNav .menuClose {float: right;  display: block; border: 1.75px solid #fff; border-radius: 50%; width: 57px; height: 57px; transition: all ease 0.6s;}
+.gnb .innerNav .menuClose span { font-weight: bold; display: block; text-align: center; align-items: center; line-height: 57px; color: #fff; font-size: 20px; font-weight: 500;}
+.gnb .innerNav ul {width: 100%; margin: 0 auto; padding: 100px 0; box-sizing: border-box;}
+.gnb .innerNav ul li {position: relative; text-align: center; margin-bottom: 51px; align-items: center;}
+.gnb .innerNav ul li:last-child {margin-bottom: 0;}
+.gnb .innerNav ul li a p {text-transform:uppercase; display:inline-block; font-size: 100px; color: #fff; letter-spacing: -3px; position: relative; 
+transition:all 0.8s}
+.gnb .innerNav ul li a p:after {display:block; content: ''; border-bottom: 2px solid #FE4400;  transform: scaleX(0); transition: transform 0.6s ease-in-out;}
+
+/* visual */
+.visual {background: #FFFAF4; height: 110vh; position: relative; }
+.visual::after {content: '';  width: 100%; height: 100%; background: #FEEDE2; position: absolute; left: 0; top: 0; transition: all 1.2s; transition-delay: 0.2s; z-index: 2;}
+.visual .inner {width: 90%; margin: 0 auto; }
+.visual .inner ul {width: 100%; height: 100vh;position: relative; }
+.visual .inner ul li.main {width: 30%; margin: 0 auto; padding-top: 190px; filter: brightness(95%); box-sizing: border-box;}
+.visual .inner ul li.main img {width: 100%; z-index: 0;}
+.visual .inner ul li.main .titleBox1 {width: 130%; text-align: center; position: absolute; top: 70%; left: 50%; transform: translateX(-50%);}
+.visual .inner ul li.main .titleBox1 h2 {font-size: 160px; font-weight: lighter; color: #FE4400; margin-bottom: 40px;}
+.visual .inner ul li.main .titleBox1 p {font-size: 26px;}
+.visual .inner ul li.main .titleBox1 p span {color: #FE4400;}
+.visual .inner ul li.deco1 {font-size: 20px; position: absolute; left: -10%; top: 60%; transform:  rotate(90deg);color: rgba(91, 82, 62, 0.70); }
+.visual .inner ul li.deco2 {width: 10%; position: absolute; top: 43%; left: 27%; animation-name: deco2; animation-duration: 3s; animation-iteration-count: infinite; transition: all 0.3s;}
+.visual .inner ul li.deco2 img {width: 100%;}
+.visual .inner ul li.deco3 {width: 10%; position: absolute; top: 31%; right: 23%; animation-name: deco3; animation-duration: 5s; animation-iteration-count: infinite; animation-direction : alternate; animation-delay : 1s;}
+.visual .inner ul li.deco3 img {width: 100%;}
+.visual .inner ul li.deco4 {width: 10%; transform: rotate(-32deg); position: absolute; top: 48%; right: 14%; animation-name: deco4; animation-duration: 5s; animation-iteration-count: infinite; transition: all 0.3s;}
+.visual .inner ul li.deco4 img {width: 100%;}
+.visual .inner ul li.deco5 {text-align: center;  width: 13%; font-size: 40px; position: absolute; bottom: 41%; right: 25%; }
+
+/* aboutDetail */
+.aboutDetail {background: #FFFAF4; height: 120vh; overflow: hidden;}
+.aboutDetail .inner {width: 83%; margin: 0 auto;}
+.aboutDetail .inner .titleBox2 {padding-top: 160px;}
+.titleBox2.motion {transform: translate3d(0,0,0) skewY(0deg); overflow: hidden; animation-name: textAni; animation-duration: 1.3s;}
+.aboutDetail .inner .titleBox2 .tag {font-size: 20px; color: rgba(91, 82, 62, 0.70);}
+.aboutDetail .inner .titleBox2 h3 {font-weight: lighter;  font-size: 40px; margin: 20px 0 70px;}
+.aboutDetail .inner .titleBox2 h3 span {color: #FE4400; font-weight: bold;}
+.aboutDetail .inner .container {display: flex; justify-content: space-between; }
+.aboutDetail .inner .container.motion {animation-name: conAni; animation-duration: 1.6s;}
+.aboutDetail .inner .container .left {width: 27%; position: relative; margin-left: 110px;}
+.aboutDetail .inner .container .left .profile {width: 90%;}
+.aboutDetail .inner .container .left .profile img {width: 100%; margin-top: 20px;}
+.aboutDetail .inner .container .left .deco {width: 50%; position: absolute; top: 60%; right: 0;}
+.aboutDetail .inner .container .left .deco img {width: 100%;}
+.aboutDetail .inner .container .right {width: 60%; display: flex; flex-wrap: wrap;}
+.aboutDetail .inner .container .right li {width: 45%; }
+.aboutDetail .inner .container .right li:nth-child(3) p img {margin-right: 7px;}
+.aboutDetail .inner .container .right li:nth-child(4) .subTitle {padding-top: 40px;}
+.aboutDetail .inner .container .right li:nth-child(4) {height: 200px;}
+.aboutDetail .inner .container .right li:nth-child(4) .subTitle2 {font-size: 16px; margin-bottom: 20px; }
+.aboutDetail .inner .container .right li .icon {display: flex; flex-wrap: wrap; width: 80%;}
+.aboutDetail .inner .container .right li .icon img {margin-right: 20px; margin-bottom: 10px;}
+.aboutDetail .inner .container .right li .icon img:nth-child(5) {margin-left: 40px;}
+.aboutDetail .inner .container .right li .subTitle {font-size: 30px; color: #FE4400;}
+.aboutDetail .inner .container .right li p {font-size: 20px; margin-bottom: 10px;}
+
+/* timeline */
+.timeline {background: #FFFAF4; width: 100%; height: 110vh; position: relative; overflow: hidden; transition: background-color 0.2s;}
+.timeline .titleBox.motion {transform: translate3d(0,0,0) skewY(0deg);  animation-name: textAni; animation-duration: 1.3s;}
+.timeline .road .dot {position: relative; cursor: pointer; width: 20px; height: 20px; border-radius: 50%; background: #FE4400;}
+.timeline .road .dot:after {content: ''; width: 100%; height: 100%; border-radius: 50%; background: rgba(254, 68, 0, 0.34); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: dot 1.5s infinite; transform-origin: 67% 70%;}
+.timeline .road .r1 .dot {position: absolute; left: 6%; top: 7.5%; z-index: 1;}
+.timeline .road .r2 .dot {position: absolute; left: 3%; top: 30%; z-index: 1;}
+.timeline .road .r3 .dot {position: absolute; left: 54%; top: 93%; z-index: 1;}
+.timeline .road .r4 .dot {position: absolute; right: 10%; top: 10%; z-index: 1;}
+.timeline .road .r1 .roadImg {position: absolute; top: 49%; left: 0.2%; cursor: pointer; }
+.timeline .road .r2 .roadImg {position: absolute; top: 19%; left: 12.2%; cursor: pointer; }
+.timeline .road .r3 .roadImg {position: absolute; top: 29.5%; left: 48%; cursor: pointer; }
+.timeline .road .r4 .roadImg {position: absolute; top: 42.5%; left: 58.2%; cursor: pointer;}
+
+.timeline .road .r3 .roadImg::before {content: ''; width: 15%; height: 25%; position: absolute; top: 72%; left: 51%; background-image: url(../IMG/ABOUT/timeline/deco2.png); background-repeat: no-repeat;}
+.timeline .road .r2 .roadImg::before {content: ''; width: 15%; height: 40%; position: absolute; top: -7%; left: -6%; background-image: url(../IMG/ABOUT/timeline/deco1.png); background-repeat: no-repeat;}
+
+.timeline .r1 .textBox {position: absolute; left: 10%; top: 40%; background-image: url(../IMG/ABOUT/timeline/img1.png); background-repeat: no-repeat; opacity: 0; z-index: 1;}
+.timeline .r2 .textBox {position: absolute; left: 20%; top: 20%; background-image: url(../IMG/ABOUT/timeline/img2.png); background-repeat: no-repeat; opacity: 0; z-index: 1;}
+.timeline .r3 .textBox {background-image: url(../IMG/ABOUT/timeline/img3.png);background-repeat: no-repeat; position: absolute; left: 50%; top: 50%; opacity: 0; z-index: 2;}
+.timeline .r4 .textBox {background-image: url(../IMG/ABOUT/timeline/img4.png);background-repeat: no-repeat; position: absolute; left: 55%; top: 40%; opacity: 0; z-index: 2; }
+.timeline .textBox .left p {font-size: 26px; color: #fff; background: #FE4400; border-radius: 30px; box-sizing: border-box; display: inline-block; margin-left: -80px; margin-top: -120px; width: 36%; padding: 15px  20px;} 
+.timeline .textBox .right p {font-size: 20px; background: #fff; padding: 30px 30px; box-sizing: border-box; border-radius: 50px; display: inline-block; border: 1px solid #FE4400; margin-left: 300px; margin-top: 160px; box-sizing: border-box;}
+
+
+/** motto **/
+.motto {background: #FEEDE2; height: 110vh; position: relative;}
+.motto .inner {width: 80%; margin: 0 auto; }
+.motto .titleBox.motion {transform: translate3d(0,0,0) skewY(0deg);  animation-name: textAni; animation-duration: 1.3s;}
+.motto .inner .textBox {position: relative; padding-top: 100px;}
+.motto .inner .textBox .mainText {text-align: center; margin-bottom: 100px; }
+.motto .inner .textBox .mainText p {font-size: 60px; }
+.motto .inner .textBox .mainText span {font-size: 40px;}
+.motto .inner .textBox p {width: 100%; font-size: 50px; line-height: 80px; text-align: center;}
+.motto .inner .textBox p .hover-target {z-index: 1; border: 1px solid #5B523E; border-radius: 50px; padding: 0 20px; position: relative; display: inline-block; text-decoration: none;}
+.cursor2,.cursor3{position: fixed; transform: translate(-50%,-50%); pointer-events: none; top: 50%; left: 50%; transition: all 200ms ease-out; background-position: center;}
+.img-1-wrap .cursor2{background-image: url('../IMG/ABOUT/motto/img1-2.png'); }
+.img-2-wrap .cursor3{background-image: url('../IMG/ABOUT/motto/img2.png');}
+
+
+/** hobby **/
+.hobby {background: #FEEDE2; width: 100%; height: 110vh; overflow: hidden;}
+.hobby .titleBox.motion {transform: translate3d(0,0,0) skewY(0deg);  animation-name: textAni; animation-duration: 1.3s;}
+.hobby .textScroll {width: 100%;}
+.hobby .textScroll ul { display: flex; justify-content: space-between; color: #FE4400; font-size: 110px; padding-top: 60px; white-space: nowrap;}
+.hobby .textScroll ul li:nth-child(2n) {-webkit-text-stroke:1px #FE4400; color: transparent; letter-spacing: 1px;}
+
+/* textScroll >  scroller1 */
+.simply-scroll-container {position: relative; width: 100%;}
+.simply-scroll-clip {position: relative; overflow: hidden;}
+.simply-scroll .simply-scroll-list {display: flex; flex-wrap: nowrap;}
+
+.hobby .imgScroll {padding-left: 50%;  padding-top: 80px; display: flex; width: 100%; justify-content: space-between; flex-wrap: nowrap; }
+.hobby .imgScroll li {width: 455px; height: 380px; border-radius: 230px; position: relative; }
+.hobby .imgScroll li img {width: 100%; border-radius: 230px; object-fit: cover; filter: brightness(90%);}
+
+#innerBox {background: #fff;  box-sizing: border-box; }
+#innerBox .box {width: 80%; margin: 120px auto; }
+#innerBox .box .title {font-size: 22px; text-align: center; margin-bottom: 30px; }
+#innerBox .box .text {font-size: 16px; line-height: 22px; letter-spacing: -0.8px; text-align: center;}
+
+.hobby .imgScroll li.a {transform: rotate(10deg);}
+.hobby .imgScroll li.b {transform: rotate(-8deg);}
+.hobby .imgScroll li.c {transform: rotate(8deg);}
+.hobby .imgScroll li.d {transform: rotate(-15deg);}
+.hobby .imgScroll li.e {transform: rotate(10deg);}
+.hobby .imgScroll li.f {transform: rotate(-5deg);}
+.hobby .imgScroll li.g {transform: rotate(13deg);}
+
+.hobby .imgScroll li.a:after {content: ''; position: absolute; width: 268px; height: 380px; background: #fecbb59d; top: 2%; left: 7%; border-radius: 300px; transform: rotate(3deg);z-index: -1;}
+.hobby .imgScroll li.c:after {content: ''; position: absolute; width: 268px; height: 380px; background: #fecbb59d; top: -2%; left: 7%; border-radius: 300px; transform: rotate(3deg);z-index: -1;}
+.hobby .imgScroll li.d:after {content: ''; position: absolute; width: 268px; height: 380px; background: #fecbb59d; top: 2%; left: 7%; border-radius: 300px; transform: rotate(3deg);z-index: -1;}
+
+/** footer **/
+.footer {background: #FFFAF4; padding-top: 130px;}
+.footer .inner {width: 83%; background: #fff; border-top-left-radius: 9999px; border-top-right-radius: 9999px; margin: 0 auto;}
+.footer .inner .titlebox {text-align: center; padding-top: 50px; margin-bottom: 30px;}
+.footer .inner .container {position: relative; } 
+.footer .inner .container ul {position: relative;  display: flex; justify-content: space-between; width: 60%; margin: 0 auto;}
+.footer .inner .container ul li {width: 33.5%;}
+.footer .inner .container ul li .svgAni {width: 90%;}
+.footer .inner .container ul li:nth-child(2) {left: 50%; top: 20%; position: absolute; width: 50%; }
+.footer .inner .container ul li p {font-size: 34px; margin-bottom: 32px; color: rgba(91, 82, 62, 0.70);}
+.footer .inner .container ul li p span {margin-right: 30px; color: #5B523E;}
+.footer .inner .container .copy { bottom: 5%; left: 50%;transform: translateX(-50%); position: absolute; font-size: 20px; }
+.container.motion #svg01 {stroke-dasharray: 2981; stroke-dashoffset: 2981; animation: deco1 0.8s linear 0.8s forwards;}
+
+/*pc모드*/
+@media screen and (max-width:1599px){
+  .rightBox {width: 90%;}
+  .rightBox li {width: 24%; font-size: 20px; text-align: center;}
+  .rightBox li.mail {width: 35%;}
+ }

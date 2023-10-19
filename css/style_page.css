@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/** layout **/
+body {font-family: 'Pretendard'; font-size: 26px; color: #5B523E;}
+
+
+/** font **/
+.en1 {font-family: 'ValkyRegular';}
+.en2 {font-family: 'LibreBaskerville-Regular';}
+.en3 {font-family: 'LibreBaskerville-Italic';}
+
+/** visual **/
+.wrap {width: 100%;}
+.wrap .visual {width: 100%; height: 100vh; background-image: url(../IMG/PAGE/visual_dopda.png); background-repeat: no-repeat; filter: brightness(80%);}
+.wrap .visual .inner {width: 83%; height: 100%; margin: 0 auto;}
+.wrap .visual .inner .titleBox {width: 100%; display: flex;justify-content: space-between; font-size: 80px; padding-top: 80px; color: #FE4400;}
+.wrap .visual .inner .titleBox h3 {line-height: 85px;}
+.wrap .visual .inner .explain {margin-top: 20px; margin-bottom: 149px;}
+.wrap .visual .inner .explain span {color: #FF723F; font-size: 40px; display: block; margin-bottom: 10px;}
+.wrap .visual .inner .explain p {font-size: 20px; color: #5B523E;}
+.wrap .visual .inner .colorBox {display: flex; width: 100%; justify-content: space-between;}
+.wrap .visual .inner .colorBox .txt {display: block; font-size: 30px; margin-bottom: 70px; color: #FF723F;}
+.wrap .visual .inner .colorBox .main {width: 20%;}
+.wrap .visual .inner .colorBox .main .ronud {display: block; width: 240px; height: 240px; background: #39312b; text-align: center; line-height: 240px; border-radius: 50%; color: #fff; font-size: 20px;}
+.wrap .visual .inner .colorBox .sub {width: 72%; }
+.wrap .visual .inner .colorBox .sub ul {display: flex; width: 100%; justify-content: space-between; position: relative;}
+.wrap .visual .inner .colorBox .sub ul li {width: 240px; height: 240px; background: #39312b; text-align: left; line-height: 240px; border-radius: 50%; color: #fff; font-size: 20px; padding-left: 30px; box-sizing: border-box;}
+.wrap .visual .inner .colorBox .sub ul li:nth-child(1) {background: #000; color: #fff;}
+.wrap .visual .inner .colorBox .sub ul li:nth-child(2) {background: #4E4E4E; color: #fff; position: absolute; left: 16%;}
+.wrap .visual .inner .colorBox .sub ul li:nth-child(3) {background: #EEEEEE; color: #5B523E; position: absolute; left: 32%; border: 1px solid rgba(44, 44, 44, 0.10);}
+.wrap .visual .inner .colorBox .sub ul li:nth-child(4) {background: #F0F0F0; color: #5B523E; position: absolute; left: 48%; border: 1px solid rgba(44, 44, 44, 0.10);}
+.wrap .visual .inner .colorBox .sub ul li:nth-child(5) {background: #FFFF; color: #5B523E; position: absolute; left: 64%; border: 1px solid rgba(44, 44, 44, 0.10);}
+
+.wrap .typograrhy {width: 100%; height: 100vh; background: #F5EEE8;}
+.wrap .typograrhy .inner {width: 83%; margin: 0 auto;}
+.wrap .typograrhy .inner .explain {padding-top: 250px; width: 40%;}
+.wrap .typograrhy .inner .explain span {color: #FF723F; font-size: 40px; display: block; margin-bottom: 10px;}
+.wrap .typograrhy .inner .explain p {font-size: 20px; color: #5B523E;}

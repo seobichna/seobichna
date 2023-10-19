@@ -1,0 +1,446 @@
+@charset "UTF-8";
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/** layout **/
+body {font-family: 'Pretendard'; font-size: 26px; color: #5B523E;}
+.wrap {overflow: hidden;}
+
+/** font **/
+.en1 {font-family: 'ValkyRegular';}
+.en2 {font-family: 'LibreBaskerville-Regular';}
+.en3 {font-family: 'LibreBaskerville-Italic';}
+
+/* 공통 */
+.titleBox2.motion {transform: translate3d(0,0,0) skewY(0deg);  animation-name: textAni; animation-duration: 1.3s;}
+.subText.motion p {transform: translate3d(0,0,0) skewY(0deg);  animation-name: textAni; animation-duration: 2s;}
+
+
+/** active 모음 **/
+
+/* 스크롤 시 header 없어짐 */
+header.active {transform: translateY(-200%); transition: all 0.3s;}
+
+
+/** on 모음 **/
+
+/* hrader > gnb */
+.gnb.on {right: 0; transition: all 0.8s; opacity: 1;}
+.brainstoming .inner .brain li:nth-child(2) .on {opacity: 1;}
+.brainstoming .inner .brain li:nth-child(1) .on {opacity: 0;}
+
+/** hover 모음 **/
+
+/* logo */
+header .innerHeader .logo img:hover {transform: scale(1.1);}
+
+/* gnb > menuOpen */
+header .innerHeader .rightBox .menuOpen:hover {background: #FE4400; }
+header .innerHeader .rightBox .menuOpen:hover span {background: #fff;}
+header .innerHeader .rightBox .menuOpen:hover span.a {top: 35%;}
+header .innerHeader .rightBox .menuOpen:hover span.c {bottom: 30%;}
+header .innerHeader .rightBox .mail:hover {transform: scale(1.1);}
+header .innerHeader .rightBox .work:hover {transform: scale(1.1);}
+
+
+/* gnb > menuClose */
+.gnb .innerNav .menuClose:hover {transform: rotate(180deg); background-color: #FE4400; border: 1.75px solid #FE4400;}
+.gnb .innerNav .menuClose:hover span {color: #fff;}
+
+/* gnb > menuClose */
+.gnb .innerNav .menuOpen:hover {transform: rotate(180deg); background-color: #FE4400;}
+.gnb .innerNav .menuOpen:hover span {color: #fff;}
+
+/* gnb >li */
+.gnb .innerNav ul li a p:hover{color: #FE4400;}
+.gnb .innerNav ul li a p:hover:after{ transform: scaleX(1); transform-origin: 0% 50%;}
+
+/* text */
+.subtitleBox.motion {animation-name: slide-up2; animation-duration: 1.5s;}
+.subtitle.motion {animation-name: slide-up2; animation-duration: 1.5s;}
+@keyframes slide-up2 {
+    0% {opacity: 0; transform: translateY(40px);}
+    30% {opacity: 0; transform: translateY(40px);}
+  }
+
+@keyframes slide-up {
+    0% {opacity: 0; transform: translateY(50px);}
+    80% {opacity: 0; transform: translateY(50px);}
+  }
+
+@keyframes textAni {
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: translate3d(0,20px,0) skewY(4deg); transform-origin: top left;}
+  }
+
+
+/* rotation */
+@keyframes rotation {
+    100% {transform : rotate(360deg);}
+  }
+
+/* img */
+.img.motion {animation-name: imgAni; animation-duration: 1s;}
+@keyframes imgAni {
+  0% {transform: translateY(50px);}
+}
+
+
+/** header **/
+header {position: fixed; z-index: 100; width: 100%; padding-top: 50px; box-sizing: border-box; height: 57px;}
+header .innerHeader {width: 90%; margin: 0 auto; justify-content: space-between; display: flex;}
+header .innerHeader .logo {width: 130px;}
+header .innerHeader .logo a {width: 100%;}
+header .innerHeader .logo a img {width: 100%; transition: all 0.3s;}
+header .innerHeader .rightBox {justify-content: space-between;  display: flex;  width: 33%;  line-height: 57px; font-size: 26px; color: #FE4400;}
+header .innerHeader .rightBox .mail {color: #FE4400; border: 1.75px solid #FE4400; border-radius: 27.5px; padding: 0px 20px; transition: all 0.3s;}
+header .innerHeader .rightBox .work {color: #ffff; background: #FE4400; border-radius: 27.5px; padding: 0px 20px; transition: all 0.3s;}
+header .innerHeader .rightBox .menuOpen {border: 1.75px solid #FE4400; border-radius: 50%; width: 57px; position: relative; cursor: pointer; transition: all 0.3s;}
+header .innerHeader .rightBox .menuOpen span {width: 18px; height: 1px; background: #FE4400; position: absolute; left: 50%; transform: translateX(-50%); transition: all 0.3s;}
+header .innerHeader .rightBox .menuOpen span.a {top: 40%;}
+header .innerHeader .rightBox .menuOpen span.b {top: 50%;}
+header .innerHeader .rightBox .menuOpen span.c {bottom: 35%;}
+
+
+/** header > gnb **/
+.gnb {opacity: 0; padding: 37px 0; background: #FECBB5; position: absolute; top: 0; right: -100%; width: 100%; height: 100vh;}
+.gnb .innerNav {width: 90%; margin: 0 auto;}
+.gnb .innerNav .menuClose {float: right;  display: block; border: 1.75px solid #fff; border-radius: 50%; width: 57px; height: 57px; transition: all ease 0.6s;}
+.gnb .innerNav .menuClose span { font-weight: bold; display: block; text-align: center; align-items: center; line-height: 57px; color: #fff; font-size: 20px; font-weight: 500;}
+.gnb .innerNav ul {width: 100%; margin: 0 auto; padding: 100px 0; box-sizing: border-box;}
+.gnb .innerNav ul li {position: relative; text-align: center; margin-bottom: 51px; align-items: center;}
+.gnb .innerNav ul li:last-child {margin-bottom: 0;}
+.gnb .innerNav ul li a p {text-transform:uppercase; display:inline-block; font-size: 100px; color: #fff; letter-spacing: -3px; position: relative; 
+transition:all 0.8s}
+.gnb .innerNav ul li a p:after {display:block; content: ''; border-bottom: 2px solid #FE4400;  transform: scaleX(0); transition: transform 0.6s ease-in-out;}
+
+
+/** overview **/
+.overview .inner .titleBox.motion p .char {display: inline-block; animation: slide-up 1s cubic-bezier(.10, 0, .10, 1) both;animation-delay: calc(60ms * var(--char-index));}
+.overview .inner .titleBox.motion h2 .char {display: inline-block; animation: slide-up 3s cubic-bezier(.10, 0, .10, 1) both;animation-delay: calc(60ms * var(--char-index));}
+
+.overview {background: #FEEDE2; width: 100%; height: 190vh; position: relative;}
+.overview .overviewSpace {background: #FFFAF4; width: 100%; height: 70vh; position: absolute; top: 0; left: 0;}
+.overview .inner {width: 83%; height: 100%; margin: 0 auto;}
+.overview .inner .top {width: 100%; height: 100vh;}
+.overview .inner .top .titleBox {padding-top: 240px; overflow: hidden; position: absolute; top: 2%;}
+.overview .inner .top .titleBox p {font-size: 30px; color: rgba(91, 82, 62, 0.70);}
+.overview .inner .top .titleBox h2 {font-size: 80px; color: #FE4400; font-weight: normal;}
+.overview .inner .top .bgDeco {font-size: 300px; color: rgba(254, 68, 0, 0.10); position: absolute; top: 5.5%; left: -1.5%;}
+.overview .inner .top .bgDeco1 {position: absolute; top: 38%; left: 50%; transform: translate(-50%,-50%); width: 28%;}
+.overview .inner .top .bgDeco1 img {width: 100%;}
+.overview .inner .bottom .titleBox2 {margin-top: 60px;  position: relative; }
+.overview .inner .bottom .titleBox2 h2 { font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.overview .inner .bottom .titleBox2 img {position: absolute; top: -50%; left: 50%; transform: translateX(-50%);}
+.overview .inner .bottom .subText {text-align: center;}
+.overview .inner .bottom ul {display: flex; width: 60%; margin: 0 auto; margin-top: 120px;}
+.overview .inner .bottom ul li.round {border: solid 1px #FE4400; width: 230px; height: 230px; border-radius: 50%; text-align: center;}
+.overview .inner ul li span {font-size: 26px; color: #FE4400;  margin: 60px 0 20px;   display: block;}
+.overview .inner ul li p {font-size: 24px;}
+.overview .inner ul li.line {width: 10%; background: rgba(254, 68, 0, 0.40); height: 1px;margin: auto; width: 13%;}
+
+
+/* brainstoming */
+.brainstoming {width: 100%; height: 90vh; position: relative;}
+.brainstoming .inner {width: 83%; margin: 0 auto;}
+.brainstoming .titleBox2 {margin-top: 60px;  position: relative; }
+.brainstoming .titleBox2 h2 { font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.brainstoming .titleBox2 img {position: absolute; top: -50%; left: 50%; transform: translateX(-50%);}
+.brainstoming .inner .line {display: flex; justify-content: space-between; position: absolute; top: 60%; left: 50%; width: 83%; z-index: 1; transform: translateX(-50%);}
+.brainstoming .inner .line li {font-size: 26px; font-weight: lighter;}
+.brainstoming .inner .line li:nth-child(2) {width: 80%; height: 1px; background: #FE4400; margin: auto;}
+.brainstoming .inner .brain li{ width: 75%; margin: 0 auto;}
+.brainstoming .inner .brain li img {width: 100%;}
+
+
+
+/* Afinitydiagrame */
+.Afinitydiagrame {width: 100%; height: 100vh;}
+.Afinitydiagrame .inner {width: 100%; height: 100%;}
+.Afinitydiagrame .titleBox2 {padding-top: 80px; box-sizing: border-box;}
+.Afinitydiagrame .titleBox2 h2 {position: relative;  font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.Afinitydiagrame .titleBox2 img {position: absolute; top: 70%; left: 50%; transform: translateX(-50%);}
+.Afinitydiagrame .inner > ul {width: 100%; height: 400px; display: flex; margin-top: 200px; position: relative;}
+.Afinitydiagrame .inner > ul >li {position: relative;}
+.Afinitydiagrame .inner > ul >li .textinner {position: absolute; top: 50%; left: 5%; transform: translateY(-50%);}
+.Afinitydiagrame .inner > ul > li:nth-child(4) .textinner {position: absolute; left: 28%;}
+.Afinitydiagrame .inner > ul > li:nth-child(3) .textinner {position: absolute; left: 20%;}
+.Afinitydiagrame .inner > ul > li:nth-child(2) .textinner {position: absolute; left: 11%;}
+.Afinitydiagrame .inner > ul > li:nth-child(1) {width: 30.5%; height: 100%; background: rgba(255, 114, 63, 0.20); border-top-right-radius: 9999px;border-bottom-right-radius: 9999px; padding-left: 60px; box-sizing: border-box; align-items: center;}
+.Afinitydiagrame .inner > ul > li:nth-child(2) {width: 41.5%; height: 100%; background: rgba(255, 114, 63, 0.20); box-sizing: border-box; align-items: center; border-top-right-radius: 9999px; border-top-left-radius: 9999px; border-bottom-right-radius: 9999px; border-bottom-left-radius: 9999px; position: absolute; left: 27%;}
+.Afinitydiagrame .inner > ul > li:nth-child(3) {width: 21%; height: 100%; background: rgba(255, 114, 63, 0.20); box-sizing: border-box; align-items: center; position: absolute; left: 65.3%; border-radius: 50%;}
+.Afinitydiagrame .inner > ul > li:nth-child(4) {width: 17%; height: 100%; background: rgba(255, 114, 63, 0.20); box-sizing: border-box; align-items: center; position: absolute; left: 83%; border-top-left-radius: 9999px; border-bottom-left-radius: 9999px; overflow: hidden;}
+.Afinitydiagrame .inner > ul > li .text {font-size: 30px; color: #FE4400; margin-bottom: 30px; display: block;}
+.Afinitydiagrame .inner > ul > li ul {width: 100%; display: flex;}
+.Afinitydiagrame .inner > ul > li ul li {text-align: center; width: 100px; font-size: 24px; position: relative;}
+.Afinitydiagrame .inner > ul > li ul li.line {width: 35px; height: 1px; background: rgba(91, 82, 62, 0.60); margin-top: 13px; }
+.Afinitydiagrame .inner > ul > li ul li.line:after {content: ''; width: 10px; height: 10px; border-radius: 50%;  background: rgba(91, 82, 62, 0.60); position: absolute; left: 100%; margin-top: -5px;}
+
+/* insightdeduction */
+.insightdeduction {width: 100%; height: 90vh;}
+.insightdeduction .inner {width: 83%; background: red;}
+.insightdeduction .titleBox2 {margin-top: 60px;  position: relative; }
+.insightdeduction .titleBox2 h2 { font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.insightdeduction .titleBox2 img {position: absolute; top: -50%; left: 50%; transform: translateX(-50%);}
+.insightdeduction .inner .textBox {width: 100%; padding-top: 180px;}
+.insightdeduction .inner .textBox p {font-size: 50px; margin-bottom: 38px; text-align: center; color: rgba(91, 82, 62, 0.70); font-weight: lighter;}
+.insightdeduction .inner .textBox p span {color: #5B523E; position: relative;}
+.insightdeduction .inner .textBox p span::after {content: ''; width: 100%; height: 62px; background: rgba(255, 114, 63, 0.30); position: absolute; top: 0; left: 0; z-index: -1;}
+.insightdeduction .inner .textBox p span.st1::before {content: '01'; font-size: 30px; font-weight: lighter; position: absolute; top: -54%; } 
+.insightdeduction .inner .textBox p span.st2::before {content: '02'; font-size: 30px; font-weight: lighter; position: absolute; top: -54%; } 
+.insightdeduction .inner .textBox p span.st3::before {content: '03'; font-size: 30px; font-weight: lighter; position: absolute; top: -54%; } 
+
+/* refernce */
+.refernce {width: 100%; height: 240vh; background: #FFFAF4;}
+.refernce .inner {width: 83%;margin: 0 auto; height: 100%;}
+.refernce .titleBox2 { position: relative; padding-top: 120px;}
+.refernce .titleBox2 h2 { font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.refernce .titleBox2 img {position: absolute; top: 72%; left: 50%; transform: translateX(-50%);}
+.refernce .inner ul {display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap; position: relative; margin-top: 100px;}
+.refernce .inner ul li {width: 32.5%; }
+.refernce .inner ul li img {box-shadow: 0px 4px 30px 2px rgba(20, 20, 20, 0.05);
+ border-radius: 20px;}
+.refernce .inner ul li span {display: block; color: #FE4400; margin-bottom: 10px;}
+.refernce .inner ul li p {margin-bottom: 20px; font-size: 24px;}
+.refernce .inner ul li:nth-child(2) {margin-top: 100px;}
+.refernce .inner ul li:nth-child(3) {margin-top: 200px;}
+.refernce .inner ul li:nth-child(4) {position: absolute; bottom: -8%; right: 35%;}
+.refernce .inner ul li:nth-child(5) {position: absolute; bottom: -16%; right: 2%;}
+
+/* wireframe */
+
+/* wireframe simply */
+.simply-scroll-container {position: relative; width: 100%;}
+.simply-scroll-clip {position: relative; overflow: hidden;}
+.simply-scroll .simply-scroll-list {display: flex; flex-wrap: nowrap;}
+
+.wireframe {width: 100%; height: 90vh; background: #FEEDE2; position: relative; overflow: hidden;}
+.wireframe .round1 {position: absolute; top: 3%;  left: 30%; z-index: 1; animation: rotation 10s linear infinite;}
+.wireframe .round2 {position: absolute; top: 75%;  right: 30%; z-index: 1; animation: rotation 10s linear infinite;}
+.wireframe ul { width: 100%;display: flex; justify-content: space-between;  box-sizing: border-box;}
+#scroller4 {padding-top: 100px;}
+#scroller5 {padding-top: 70px;}
+.wireframe ul li {width: 380px; height: 300px;}
+.wireframe ul li img {width: 90%; height: 90%; border-radius: 20px;}
+
+
+/* Storyboard */
+
+.Storyboard {width: 100%; position: relative; background: #FFFAF4;}
+.Storyboard .bgDeco1 {text-align: left; font-size: 230px; color: rgba(254, 68, 0, 0.30); letter-spacing: -2.3px;  margin-top: 100px;}
+.Storyboard .bgDeco2 {text-align: right; font-size: 230px; letter-spacing: -2.3px; -webkit-text-stroke:2px rgba(254, 68, 0, 0.30); color: transparent; margin-top: -100px; }
+.Storyboard .bgDeco3 {text-align: left; font-size: 230px; color: rgba(254, 68, 0, 0.30); letter-spacing: -2.3px;  position: absolute; bottom: 60.5%;}
+.Storyboard .bgDeco4 {text-align: right; font-size: 230px; letter-spacing: -2.3px; -webkit-text-stroke:2px rgba(254, 68, 0, 0.30); color: transparent; margin-top: -100px; position: absolute; bottom: 59%; right: 0;}
+
+.Storyboard .inner {width: 83%;margin: 0 auto;}
+.Storyboard .titleBox2 {  position: relative; padding-top: 80px;}
+.Storyboard .titleBox2 h2 { font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.Storyboard .titleBox2 img {position: absolute; top: 72%; left: 50%; transform: translateX(-50%);}
+
+/* index */
+.Storyboard .inner .index {text-align: center; width: 100%; position: relative;}
+.Storyboard .inner .index .indexImg img {box-shadow: 0px 4px 30px 2px rgba(20, 20, 20, 0.05); border-radius: 20px;}
+.Storyboard .inner .index .subtitleBox {margin: 100px 0 60px 230px; text-align: left;}
+.Storyboard .inner .index .subtitleBox span {display: block; font-size: 30px; color: #FE4400; margin-bottom: 26px;}
+.Storyboard .inner .index .subtitleBox p {font-size: 22px;}
+.Storyboard .inner .index ul {width: 100%; text-align: left; overflow: hidden;}
+.Storyboard .inner .index ul li {width: 25%; position: absolute; overflow: hidden; }
+.Storyboard .inner .index ul li:nth-child(odd) span:after {content: '';  width: 15%; height: 1px; background-color: rgba(91, 82, 62, 0.70); top: 15px; left: 0%; position: absolute;}
+.Storyboard .inner .index ul li:nth-child(odd) span:before {content: '';  width: 10px; height: 10px; background-color: #5B523E; top: 10px; left: 0%; position: absolute; border-radius: 50%;}
+.Storyboard .inner .index ul li:nth-child(odd) span {font-size: 24px; display: block; margin-bottom: 20px; margin-left: 65px;}
+.Storyboard .inner .index ul li:nth-child(odd) p {margin-left: 65px;}
+.Storyboard .inner .index ul li p {font-size: 20px;}
+.Storyboard .inner .index ul li:nth-child(odd) {float: left; right: -9%; text-align: left; }
+.Storyboard .inner .index ul li:nth-child(1) {top:5%;}
+.Storyboard .inner .index ul li:nth-child(3)  {top:12%;}
+.Storyboard .inner .index ul li:nth-child(5) {top: 55%;}
+.Storyboard .inner .index ul li:nth-child(7) {top: 90%;}
+
+.Storyboard .inner .index ul li:nth-child(even) span:after {content: '';  width: 15%; height: 1px; background-color: rgba(91, 82, 62, 0.70); top: 15px; right: 0%; position: absolute;}
+.Storyboard .inner .index ul li:nth-child(even) span:before {content: '';  width: 10px; height: 10px; background-color: #5B523E; top: 10px; right: 0%; position: absolute; border-radius: 50%;}
+.Storyboard .inner .index ul li:nth-child(even) span {font-size: 24px; display: block; margin-bottom: 20px; margin-right: 65px;}
+.Storyboard .inner .index ul li:nth-child(even) p {margin-right: 65px;}
+.Storyboard .inner .index ul li:nth-child(even) {float: right; top: 0; left: -9%; text-align: right;}
+.Storyboard .inner .index ul li:nth-child(2) {top:12%;}
+.Storyboard .inner .index ul li:nth-child(4)  {top:40%;}
+.Storyboard .inner .index ul li:nth-child(6) {top: 71%;}
+
+
+/* sub */
+/* subAbout */
+.Storyboard .inner .sub .subAbout {margin-top: 600px; position: relative; margin-bottom: 120px;}
+.Storyboard .inner .sub .subAbout .subtitleBox {margin: 100px 0 60px 470px; text-align: left;}
+.Storyboard .inner .sub .subAbout .subtitleBox span {display: block; font-size: 30px; color: #FE4400; margin-bottom: 26px;}
+.Storyboard .inner .sub .subAbout .subtitleBox p {font-size: 22px;}
+.Storyboard .inner .sub .subAbout .subAboutImg {text-align: right;}
+.Storyboard .inner .sub .subAbout .subAboutImg img {box-shadow: 0px 4px 30px 2px rgba(20, 20, 20, 0.05); border-radius: 20px;}
+.Storyboard .inner .sub .subAbout ul li {width: 25%; position: absolute; text-align: right; left: 7%;}
+.Storyboard .inner .sub .subAbout ul li span:after  {content: '';  width: 15%; height: 1px; background-color: rgba(91, 82, 62, 0.70); top: 15px; right: 0%; position: absolute;}
+.Storyboard .inner .sub .subAbout ul li span:before {content: '';  width: 10px; height: 10px; background-color: #5B523E; top: 10px; right: 0%; position: absolute; border-radius: 50%;}
+.Storyboard .inner .sub .subAbout li span {font-size: 24px; display: block; margin-bottom: 20px; margin-right: 65px;}
+.Storyboard .inner .sub .subAbout ul li p {font-size: 20px;margin-right: 63px;}
+.Storyboard .inner .sub .subAbout ul li:nth-child(1) { top: 10%;}
+.Storyboard .inner .sub .subAbout ul li:nth-child(2) { top: 25%;}
+.Storyboard .inner .sub .subAbout ul li:nth-child(3) { top: 40%;}
+.Storyboard .inner .sub .subAbout ul li:nth-child(4) { top: 56%;}
+.Storyboard .inner .sub .subAbout ul li:nth-child(5) { top: 72%;}
+.Storyboard .inner .sub .subAbout ul li:nth-child(6) { top: 92%;}
+
+/* subWork1 */
+.Storyboard .inner .sub .subWork1 { position: relative; margin-bottom: 20px;}
+.Storyboard .inner .sub .subWork1 .subtitleBox {margin: 100px 0 30px 0px; text-align: left;}
+.Storyboard .inner .sub .subWork1 .subtitleBox span {display: block; font-size: 30px; color: #FE4400; margin-bottom: 26px;}
+.Storyboard .inner .sub .subWork1 .subtitleBox p {font-size: 24px;}
+.Storyboard .inner .sub .subWork1 .subWork1Img {text-align: left;}
+.Storyboard .inner .sub .subWork1 .subWork1Img img {box-shadow: 0px 4px 30px 2px rgba(20, 20, 20, 0.05); border-radius: 20px;}
+.Storyboard .inner .sub .subWork1 ul li {width: 25%; position: absolute; text-align: left; right: 6%;}
+.Storyboard .inner .sub .subWork1 ul li span:after  {content: '';  width: 15%; height: 1px; background-color: rgba(91, 82, 62, 0.70); top: 15px; left: 0%; position: absolute;}
+.Storyboard .inner .sub .subWork1 ul li span:before {content: '';  width: 10px; height: 10px; background-color: #5B523E; top: 10px; left: 0%; position: absolute; border-radius: 50%;}
+.Storyboard .inner .sub .subWork1 li span {font-size: 24px; display: block; margin-bottom: 20px; margin-left: 65px;}
+.Storyboard .inner .sub .subWork1 ul li p {font-size: 20px; margin-left: 63px;}
+
+.Storyboard .inner .sub .subWork1 ul li:nth-child(1) { top: 20%;}
+.Storyboard .inner .sub .subWork1 ul li:nth-child(2) { top: 45%;}
+.Storyboard .inner .sub .subWork1 ul li:nth-child(3) { top: 68.5%;}
+.Storyboard .inner .sub .subWork1 ul li:nth-child(4) { top: 80%;}
+
+/* subWork2 */
+.Storyboard .inner .sub .subWork2 { position: relative;  padding-bottom: 120px;}
+.Storyboard .inner .sub .subWork2 .subtitleBox {margin: 100px 0 30px 40px; text-align: left;}
+.Storyboard .inner .sub .subWork2 .subtitleBox span {display: block; font-size: 30px; color: #FE4400; margin-bottom: 26px;}
+.Storyboard .inner .sub .subWork2 .subtitleBox p {font-size: 24px;}
+.Storyboard .inner .sub .subWork2 .subWork1Img {text-align: right;}
+.Storyboard .inner .sub .subWork2 .subWork1Img img {box-shadow: 0px 4px 30px 2px rgba(20, 20, 20, 0.05); border-radius: 20px;}
+.Storyboard .inner .sub .subWork2 ul li {width: 25%; position: absolute; text-align: right; left: 6%;}
+.Storyboard .inner .sub .subWork2 ul li span:after  {content: '';  width: 15%; height: 1px; background-color: rgba(91, 82, 62, 0.70); top: 15px; right: 0%; position: absolute;}
+.Storyboard .inner .sub .subWork2 ul li span:before {content: '';  width: 10px; height: 10px; background-color: #5B523E; top: 10px; right: 0%; position: absolute; border-radius: 50%;}
+.Storyboard .inner .sub .subWork2 li span {font-size: 24px; display: block; margin-bottom: 20px; margin-right: 65px;}
+.Storyboard .inner .sub .subWork2 ul li p {font-size: 20px; margin-right: 63px;}
+
+.Storyboard .inner .sub .subWork2 ul li:nth-child(1) { top: 20%; }
+.Storyboard .inner .sub .subWork2 ul li:nth-child(2) { top: 34%;}
+.Storyboard .inner .sub .subWork2 ul li:nth-child(3) { top: 49%;}
+.Storyboard .inner .sub .subWork2 ul li:nth-child(4) { top: 80%;}
+
+/* Designsystem */
+
+.Designsystem {width: 100%; height: 180vh;}
+.Designsystem .inner {width: 83%; margin: 0 auto;}
+.Designsystem .titleBox2 { position: relative; padding-top: 120px;}
+.Designsystem .titleBox2 h2 { font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.Designsystem .titleBox2 img {position: absolute; top: 72%; left: 50%; transform: translateX(-50%);}
+.Designsystem .inner .font .subtitle {font-size: 30px; color: #FE4400;}
+.Designsystem .inner .font ul {display: flex; width: 100%; justify-content: space-between; margin-top: 40px; flex-wrap: wrap; }
+.Designsystem .inner .font ul li {height: 220px; }
+.Designsystem .inner .font ul li span {font-size: 20px; margin-left: 20px; }
+.Designsystem .inner .font ul li p {font-size: 70px;}
+.Designsystem .inner .font ul li p.first {margin-bottom: -12px;}
+.Designsystem .inner .font ul li.box span {display: block; font-size: 50px; margin-bottom: 20px; margin-left: 0;}
+.Designsystem .inner .font ul li.box {font-size: 22px;}
+.Designsystem .inner .font ul li:nth-child(even) {width: 40%;}
+.Designsystem .inner .font ul li:nth-child(odd) {width: 60%;}
+.Designsystem .inner .font ul li:nth-child(1) {font-weight: normal;}
+.Designsystem .inner .font ul li:nth-child(5) .first {font-weight: 400;}
+.Designsystem .inner .font ul li:nth-child(5) .second {font-weight: 700;}
+.Designsystem .inner .color .subtitle {margin-top: 80px; font-size: 30px; color: #FE4400;}
+.Designsystem .inner .color ul {display: flex; width: 100%; justify-content: space-between; margin-top: 40px; flex-wrap: wrap; }
+.Designsystem .inner .color ul li {height: 220px; width: 50%;}
+.Designsystem .inner .color ul li:nth-child(even) {width: 40%;}
+.Designsystem .inner .color ul li:nth-child(odd) {width: 60%;}
+.Designsystem .inner .color ul li:nth-child(odd) p {display: inline-block; width: 20.5%; height: 168px; text-align: center; border-top-right-radius: 9999px; border-top-left-radius: 9999px;}
+.Designsystem .inner .color ul li:nth-child(odd) span {margin-top: 130px; display: block; font-size: 22px;}
+.Designsystem .inner .color ul li:nth-child(odd) p.a {background: #fe4400;}
+.Designsystem .inner .color ul li:nth-child(odd) p.b {background: #ff723f;}
+.Designsystem .inner .color ul li:nth-child(odd) p.c {background: #fecbb5;}
+.Designsystem .inner .color ul li:nth-child(odd) p.d {background: #5B523E; color: #fff;}
+.Designsystem .inner .color ul li:nth-child(odd) p.e {background: #feede2;}
+.Designsystem .inner .color ul li:nth-child(odd) p.f {background: #FFF7EC;}
+.Designsystem .inner .color ul li:nth-child(odd) p.g {background: #F5EEE8;}
+.Designsystem .inner .color ul li:nth-child(odd) p.h {background: #FFFFFF; border: 1px solid #5B523E;}
+.Designsystem .inner .color ul li.box {font-size: 22px;}
+.Designsystem .inner .color ul li.box span {display: block; font-size: 50px; margin-bottom: 20px; margin-left: 0;}
+
+/*flowchart */
+.flowchart {width: 100%; height: 100vh;}
+.flowchart .inner {width: 83%; margin: 0 auto; position: relative;}
+.flowchart .titleBox2 { position: relative; padding-top: 80px;}
+.flowchart .titleBox2 h2 { font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.flowchart .titleBox2 img {position: absolute; top: 70%; left: 50%; transform: translateX(-50%);}
+.flowchart .inner .chartImg {width: 81.5%; padding-top: 30px;}
+.flowchart .inner .chartImg img {width: 100%;}
+.flowchart .inner .detail {position: absolute; right: 0; bottom: 10%;}
+.flowchart .inner .detail .fill {display: block; font-size: 20px;}
+.flowchart .inner .detail .fill:after {content: ''; width: 100%; height: 10px; background: #FF723F; position: absolute; left: -110%; top: 11%; border-radius: 20px;}
+.flowchart .inner .detail .noFill {font-size: 20px;}
+.flowchart .inner .detail .noFill:after {content: ''; width: 100%; height: 10px; position: absolute; left: -110%; bottom: 12.5%; border-radius: 20px; border: 1px solid #fe4400;} 
+
+/* InformationAi */
+.InformationAi {width: 100%; height: 155vh;}
+.InformationAi .inner {width: 83%; margin: 0 auto; position: relative;}
+.InformationAi .titleBox2 { position: relative; padding-top: 80px;}
+.InformationAi .titleBox2 h2 { font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.InformationAi .titleBox2 img {position: absolute; top: 70%; left: 50%; transform: translateX(-50%);}
+.InformationAi .inner .chartImg {text-align: center; width: 100%; padding-top: 30px; }
+.InformationAi .inner .chartImg img {width: 81.5%;}
+
+/* UserNeeds */
+.UserNeeds {width: 100%;}
+.UserNeeds .inner {width: 83%;  margin: 0  auto;} 
+.UserNeeds .titleBox2 { position: relative; padding-top: 80px;}
+.UserNeeds .titleBox2 h2 { font-size: 30px; text-align: center; font-weight: normal; margin: 100px 0 60px;}
+.UserNeeds .titleBox2 img {position: absolute; top: 70%; left: 50%; transform: translateX(-50%);}
+
+.UserNeeds {width: 100%; margin-top: 100px;}
+.UserNeeds .title {font-size: 40px; color: #FE4400; margin-top: 130px;}
+.UserNeeds .title .number {font-size: 50px;}
+.UserNeeds .txt {font-size: 24px; margin-left: 60px; margin-bottom: 60px;}
+.UserNeeds ul {width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.UserNeeds ul li {width: 45%; height: 60%;  display: flex; margin-bottom: 100px; position: relative;}
+.UserNeeds ul li img {box-shadow: 0px 4px 30px 2px rgba(20, 20, 20, 0.05); border-radius: 20px;}
+.UserNeeds .Q1 ul li:nth-child(2) {margin-top: 110px;}
+.UserNeeds .Q1 ul li:nth-child(4) {margin-top: 200px;}
+.UserNeeds .Q2 ul li:nth-child(2) {margin-top: 150px;}
+.UserNeeds .Q3 ul li:nth-child(2) {margin-top: 180px;}
+.UserNeeds .Q3 ul li:nth-child(2) p {position: absolute; top: 90%; }
+.UserNeeds .Q3 ul li:nth-child(3) p {position: absolute; left: 30%;}
+
+.UserNeeds ul li p {font-size: 20px; width: 400px;}
+.UserNeeds ul li p span {font-size: 24px; display: block; margin-bottom: 10px;}
+.UserNeeds ul li:nth-child(odd) p {position: absolute; top: 4%; left: 105%; text-align: left;}
+.UserNeeds ul li:nth-child(odd) span:after  {content: '';  width: 20%; height: 1px; background-color: rgba(91, 82, 62, 0.70); top: 15px; left: -23%; position: absolute;}
+.UserNeeds ul li:nth-child(odd) span:before {content: '';  width: 10px; height: 10px; background-color: #5B523E; top: 10px; left:-4%; position: absolute; border-radius: 50%;}
+.UserNeeds ul li:nth-child(even) span:after  {content: '';  width: 20%; height: 1px; background-color: rgba(91, 82, 62, 0.70); top: 12px; left: 103%; position: absolute;}
+.UserNeeds ul li:nth-child(even) span:before {content: '';  width: 10px; height: 10px; background-color: #5B523E; top: 8px; left:103%; position: absolute; border-radius: 50%;}
+.UserNeeds ul li:nth-child(even) p {position: absolute; top: 80%; right: 105%; text-align: right;}
+
+
+/*pc모드*/
+@media screen and (max-width:1599px){
+  .rightBox {width: 90%;}
+  .rightBox li {width: 24%; font-size: 20px; text-align: center;}
+  .rightBox li.mail {width: 35%;}
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
